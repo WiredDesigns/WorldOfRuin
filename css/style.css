@@ -12,44 +12,82 @@ body {
     background: linear-gradient(#2b1055,#7597de)
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-header .logo {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
+/* nav styles */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
 }
 
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo {
+  font-size: 1.8rem;
+  color: white;
+  padding-left: 20px;
 }
 
-header ul li {
-    list-style: none;
-    margin-left: 20px;
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
 }
 
-header ul li a {
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #fff;
-    transition: 1s;  
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: black;
 }
 
-header ul li a:hover {
-    background: #fff;
-    color: #000;
+.nav__link {
+  position: fixed;
+  width: 94%;
+  top: 5rem;
+  left: 18px;
+}
+
+.nav__link a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  transition: 0.5s;
+}
+
+.nav__link a:hover {
+  background-color: white;
+  color: black;
+}
+
+.hide {
+  display: none;
+  transition: all ease-in-out 1s;
+}
+
+@media screen and (min-width: 600px) {
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+
+  }
+
+  .nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
